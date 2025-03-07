@@ -89,3 +89,24 @@ footer div {
     width: 64px;
 }
 
+@media (max-width: 768px) {
+    header {
+        padding-left: 25px;
+    }
+
+    .content-text {
+        transform: translateX(0%);
+        top: 80px;
+        font-size: 1rem;
+        width: 100px;
+        text-align: center;
+    }
+
+    .content-image {
+        height: 70vh;
+    }
+
+    footer {
+        padding: 0px 25px;
+    }
+}
