@@ -1,0 +1,75 @@
+
+/* 
+========== PERFIL PEPSI ==========
+Tema de gradiente espacial profundo
+- Azul intenso com degradê preto
+- Efeito de profundidade binocular
+*/
+.theme-pepsi {
+    background: var(--pepsi-blue); /* Cor base de fallback */
+}
+
+.theme-pepsi header,
+.theme-pepsi footer {
+    background: transparent !important; /* Forçar fundo transparente */
+    opacity: 1 !important; /* Garantir visibilidade do conteúdo */
+    color: var(--text-light) !important; /* Garantir que o texto branco continue visível */
+}
+
+/*
+- São necessarios apenas uma transição para a pagina
+*/
+.theme-pepsi header::after,
+.theme-pepsi footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+    animation: metal-shine 8s infinite linear;
+}
+
+
+.theme-pepsi main {
+    /*
+    - Fundo com camada metálica para efeito base.
+    - Adiciona o logo com profundidade visual no centro do espaço disponível.
+    - Usa background-blend-mode para mesclar a imagem com a camada metálica.
+    */
+    background: 
+        linear-gradient(
+            335deg,
+            hsl(221, 100%, 6%) 0%,
+            hsl(221, 100%, 12%) 30%,
+            hsl(221, 100%, 6%) 100%
+        ),
+        url('../img/pepsi-globe-logo.png') center center/60% auto no-repeat;
+    background-blend-mode: multiply;
+    display: flex; /* Garante que o conteúdo interno use Flexbox */
+    justify-content: center; /* Alinha o conteúdo horizontalmente */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    height: calc(100vh - 200px); /* Espaço total da viewport menos header e footer */
+    
+
+}
+
+
+
+/* AJUSTES DE CONTRASTE PARA O GRADIENTE */
+.content-text {
+    mix-blend-mode: difference; /* Aumenta legibilidade em qualquer fundo */
+}
+
+
+
+.theme-pepsi .background-logo {
+    display: none;
+}

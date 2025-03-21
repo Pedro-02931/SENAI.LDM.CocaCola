@@ -1,0 +1,24 @@
+.theme-coke {
+    background: var(--coke-red); /* Cor base para áreas não cobertas pelo gradiente */
+}
+
+.theme-coke header,
+.theme-coke footer {
+    background-color: hsl(359, 68%, 30%); /* Versão mais escura e saturada */
+}
+
+.theme-coke main {
+    background: radial-gradient(
+        circle at center,
+        hsl(359, 68%, 20%) 0%,    /* Núcleo mais escuro */
+        hsl(359, 68%, 30%) 30%,    /* Transição média */
+        var(--coke-red) 100%       /* Borda com cor original */
+    );
+    background-size: 150% 150%;
+    background-position: center;
+}
+
+.background-logo .theme-coke {
+    opacity: 0.4; /* Aumenta a percepção de profundidade */
+    filter: brightness(12) contrast(0.8) grayscale(1);
+}
