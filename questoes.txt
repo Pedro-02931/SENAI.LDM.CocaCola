@@ -1,0 +1,99 @@
+1. O que é um repositório no Git e qual a sua importância?
+
+Um repositório no Git configura-se como a espinha dorsal da gestão de código, representando uma estrutura de dados encapsulando a totalidade do histórico de alterações de um projeto, funcionando na logica DAG, em que o nó da ponta, de forma aciclica, se conecta ao nó anterior. 
+
+Sua importância reside na capacidade de rastrear modificações, facilitar a colaboração distribuída e permitir o retorno a estados prévios do código. A importancia para o desenvolvimento de software  evita degeneracão em um caos entrópico, onde a rastreabilidade e a coordenação seriam impossíveis sem essa estrutura.
+
+2. Qual a função do Git Bash?
+
++ O Git Bash atua como uma interface de linha de comando que expõe as funcionalidades do Git em sistemas operacionais diversos. Sua função é prover um ambiente terminal compatível com os comandos Git, permitindo a interação direta com o sistema de versionamento através de instruções textuais precisas. 
++ Essa interface granular oferece controle absoluto sobre as operações do Git, possibilitando a manipulação do histórico e do fluxo de trabalho evitando a alternancia entre diferentes IDEs.
++ Isso permite o aprendizado de uma estrutura, onde os botões são apenas atalhos.
+
+3. O que faz o comando git add e qual a diferença entre git add <arquivo> e git add .?
+
++ O comando `git add` desempenha o papel de promover alterações do diretório de trabalho para o índice (staging area) do Git. 
++ Essa área de preparação funciona como um buffer transitório, permitindo ao desenvolvedor selecionar quais modificações farão parte do próximo commit. 
++ A diferença entre `git add <arquivo>` e `git add .` reside no escopo da operação: o primeiro adiciona um arquivo específico ao índice, enquanto o segundo adiciona todas as modificações (arquivos novos, modificados e removidos) presentes no diretório de trabalho sem distincão com excessão das regras do arquivo `.gitignore`. 
+
+4. Por que utilizamos o ponto (.) no comando git add .?
+
++ A utilização do ponto (`.`) no comando `git add .` serve como um metacaractere que representa o diretório de trabalho atual. 
++ Ao ser empregado nesse contexto, o Git interpreta o comando como uma instrução para adicionar recursivamente todas as alterações encontradas no diretório corrente e em suas subestruturas. 
++ Essa notação concisa simplifica a inclusão de múltiplas modificações, evitando a necessidade de especificar cada arquivo individualmente, onde é util caso todas as modificacoes sejam desejadas e o arquivo `.gitignore`esteja devidamente configurado.
+
+5. Explique o comando git commit e por que é importante criar uma mensagem descritiva.
++ O comando `git commit` é o ato de registrar as alterações que foram previamente adicionadas à área de staging no histórico do repositório local. 
++ Cada commit cria um novo ponto no histórico, contendo um snapshot completo do projeto naquele momento específico, juntamente com informações sobre o autor, a data e uma mensagem, funcionando como uma arvero de metadados. 
++ A importância de criar uma mensagem descritiva para cada commit reside na sua capacidade de documentar o motivo e o contexto das alterações introduzidas. 
+
+6. Qual a função do comando git push?
++ O comando `git push`transfere os commits do seu repositório Git local para um repositório remoto. 
++ Essa operação é essencial para a colaboração em projetos onde múltiplos desenvolvedores trabalham simultaneamente, pois permite que cada um compartilhe suas alterações com os demais membros da equipe e mantenha uma versão consistente do código em um servidor centralizado. 
++ O `git push` efetivamente sincroniza o histórico de commits entre o seu ambiente local e o repositório remoto, garantindo que todos tenham acesso às últimas modificações.
+
+7. Qual a importância de criar commits frequentes durante o desenvolvimento de um projeto?
++ Pois permite dividir o trabalho em partes menores e mais gerenciáveis, facilitando o rastreamento de erros e a identificação de quando e onde um problema foi introduzido. 
++ Além disso, os commits frequentes servem como pontos de restauração regulares, possibilitando reverter para um estado anterior do código caso algo dê errado.
++ Essa prática facilita a integração contínua e a colaboração, permitindo que outros membros da equipe incorporem suas alterações de forma mais suave e com menor probabilidade de conflitos complexos.
+
+8. Explique a função das tags HTML e como elas estruturam uma página.
++ Sua função é definir o significado e o propósito de cada parte do conteúdo, desde títulos e parágrafos até imagens e links, funcionando como o substantivo.
++ As tags geralmente vêm em pares, com uma tag de abertura e uma tag de fechamento, e o conteúdo entre elas é interpretado de acordo com a semântica da tag. 
++ O uso de tags permite uma estruturacao do conteúdo da página de maneira lógica, permitindo que os motores de renderizacao interpretem e exibam as informações corretamente, além de fornecer informações semânticas importantes para SEO e tecnologias assistivas.
+
+9. O que são atributos em uma tag HTML e qual a sua função?
++ Atributos em uma tag HTML são informações adicionais que modificam o comportamento ou a aparência do elemento definido pela tag. 
++ Eles são especificados dentro da tag de abertura, após o nome da tag, e geralmente consistem em um nome e um valor. 
++ A função dos atributos é fornecer contexto extra ao elemento.
+
+10. O que é o Emmet e como ele facilita o desenvolvimento de páginas HTML?
++ Emmet é um conjunto de plugins para editores de código que visa acelerar o desenvolvimento de páginas HTML e CSS através da utilização de abreviações e atalhos. 
++ Ele permite escrever código de forma mais rápida e eficiente, expandindo pequenas strings de texto em blocos de código HTML ou CSS completos. Por exemplo, ao digitar ! no vscode, o Emmet gera uma head. 
+
+11. O que é o box-sizing no CSS e por que usamos ele no reset inicial?
++ O `box-sizing` no CSS define como a largura e a altura de um elemento são calculadas. 
++ Por padrão, o modelo de caixa (`content-box`) considera apenas o conteúdo do elemento para definir suas dimensões, e o padding e as bordas são adicionados externamente, o que pode levar a cálculos de layout complexos. 
++ Ao definir `box-sizing: border-box`, a largura e a altura do elemento passam a incluir o conteúdo, o padding e as bordas, tornando o modelo de caixa mais intuitivo e previsível. 
++ A utilização de `box-sizing: border-box` no reset inicial do CSS é importante para normalizar o comportamento dos elementos entre diferentes navegadores, garantindo que todos sigam o mesmo modelo de cálculo de dimensões, o que facilita a criação de layouts consistentes e responsivos.
+
+12. Por que é importante utilizar tags semânticas no HTML?
++ A utilização de tags semânticas no HTML é crucial porque elas fornecem significado e estrutura ao conteúdo da página. 
++ Tags como `<article>`, `<nav>`, `<aside>`, `<header>` e `<footer>` indicam o papel e a importância do conteúdo que elas delimitam. 
++ O objetivo é:
+    - melhora a acessibilidade para usuários com deficiência visual que utilizam leitores de tela;
+    - facilitar a indexação e o entendimento do conteúdo por mecanismos de busca (SEO);
+    - tornar o código mais legível e manutenível para outros desenvolvedores.
+
+13. O que são media queries no CSS e qual a sua função?
++ Media queries no CSS são um recurso que permite aplicar estilos diferentes a um documento HTML com base em características do dispositivo de visualização, como largura da tela, altura, orientação (retrato ou paisagem) e resolução. 
++ Sua função principal é possibilitar a criação de layouts responsivos, que se adaptam de forma fluida a diferentes tamanhos de tela e dispositivos, proporcionando uma experiência de usuário otimizada em qualquer contexto. 
++ Com as media queries, é possível definir regras de estilo específicas que serão aplicadas apenas quando certas condições forem atendidas, permitindo ajustar o layout, o tamanho das fontes e outros aspectos visuais para garantir a melhor apresentação possível em cada dispositivo.
+
+14. Qual a função do GitHub Pages?
++ A função do GitHub Pages é permitir que usuários do GitHub hospedem gratuitamente páginas web estáticas diretamente de seus repositórios. 
++ É uma maneira simples e eficiente de publicar sites construídos com HTML, CSS e JavaScript, bem como documentação de projetos e portfólios pessoais. 
++ Ao configurar um repositório específico ou uma branch dentro de um repositório, o GitHub Pages automaticamente constrói e disponibiliza o conteúdo através de um URL público, tornando a publicação de sites estáticos acessível a qualquer desenvolvedor com uma conta no GitHub.
+
+15. O que é o Flexbox no CSS e para que ele é utilizado?
++ Flexbox (Flexible Box Layout Module) é um modelo de layout unidimensional no CSS projetado para facilitar a criação de layouts flexíveis e adaptáveis, especialmente para organizar elementos em uma única linha ou coluna. 
++ Ele é utilizado para alinhar, distribuir e ordenar itens dentro de um container de forma eficiente, mesmo quando o tamanho dos itens é desconhecido ou dinâmico. 
++ O Flexbox simplifica a construção de interfaces complexas, oferecendo um controle preciso sobre o posicionamento dos elementos e a distribuição do espaço disponível, tornando-o uma ferramenta essencial para o desenvolvimento de layouts responsivos e modernos.
+
+16. Qual a diferença entre justify-content e align-items em um container Flexbox?
++ `justify-content`: 
+    - Controla o alinhamento dos itens ao longo do eixo principal (que é horizontal por padrão, definido por `flex-direction: row;`). 
+    - Ela define como o espaço extra disponível no container é distribuído entre os itens, afetando seu posicionamento dentro da linha. 
++ `align-items`: 
+    - Controla o alinhamento dos itens ao longo do eixo cruzado (que é vertical por padrão). 
+    - Define como os itens são posicionados perpendicularmente ao eixo principal dentro do container.
+
+17. Como o flex-grow funciona e qual o seu propósito no layout Flexbox?
++ A propriedade `flex-grow` em um item Flexbox define a capacidade desse item de aumentar de tamanho para ocupar o espaço extra disponível no container ao longo do eixo principal. 
++ Seu valor é um número que atua como um fator de proporção. Se vários itens dentro do mesmo container tiverem a propriedade `flex-grow` definida, o espaço extra será distribuído entre eles de acordo com esses fatores. 
+
+18. Explique a diferença entre `flex-direction: column;` e `flex-direction: row;`.
++ `flex-direction: row`:
+    - Os itens são dispostos em uma linha horizontal, da esquerda para a direita. 
++ `flex-direction: column`:
+    - Os itens são dispostos em uma coluna vertical, de cima para baixo. 
