@@ -1,0 +1,89 @@
+/*==============================================================================
+  PERFIL COCA-COLA - NEURODESIGN ESTRATIFICADO
+================================================================================
+Tema de gradiente radial profundo:
+- Estimulação cortical com vermelho intenso
+- Efeitos de reflexo metálico adaptativo
+- Hierarquia visual baseada em profundidade radial
+*/
+
+/* 
+Tema principal - Ativação cortical:
+- Base cromática para cones L (560nm)
+- Fallback seguro para compatibilidade neural
+*/
+.theme-coke {
+    background: var(--coke-red);
+}
+
+/* 
+Elementos estruturais - Contraste reforçado:
+- Camadas fixas com saturação aumentada
+- Profundidade retiniana otimizada
+*/
+.theme-coke header,
+.theme-coke footer {
+    background-color: hsl(359, 68%, 30%);
+}
+
+/* 
+Efeitos de camada - Reflexo dinâmico:
+- Gradiente animado para estimulação parvocelular
+- Ciclo de 8s sincronizado com percepção periférica
+*/
+.theme-coke header::after,
+.theme-coke footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+    animation: metal-shine 8s infinite linear;
+}
+
+/* 
+Área de conteúdo principal - Renderização térmica:
+- Gradiente radial de alta intensidade (circle at center)
+- Núcleo escuro para efeito de profundidade binocular
+*/
+.theme-coke main {
+    background: radial-gradient(
+        circle at center,
+        hsl(359, 68%, 20%) 0%,
+        hsl(359, 68%, 30%) 30%,
+        var(--coke-red) 100%
+    );
+    background-size: 150% 150%;
+    background-position: center;
+}
+
+/* 
+Elementos de profundidade - Camada subliminar:
+- Opacidade ajustada para processamento subcortical
+- Filtros de intensificação para via parvocelular
+*/
+.theme-coke .background-logo {
+    opacity: 0.4;
+    filter: brightness(12) contrast(0.8) grayscale(1);
+}
+
+/*==============================================================================
+  ANIMAÇÃO METAL-SHINE UNIFICADA
+================================================================================
+Keyframes otimizados para ambos os temas:
+- Padrão de movimento lateral constante
+- Velocidade angular uniforme (linear)
+- Loop infinito para persistência retiniana
+*/
+@keyframes metal-shine {
+    0% { background-position: -100% 0; }
+    100% { background-position: 200% 0; }
+}

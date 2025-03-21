@@ -3,27 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Coca Cola</title>
+    <title>Toggle de Marcas: Coca-Cola & Pepsi</title>
+    <link rel="stylesheet" href="./styles/Component.css">
+    <link rel="stylesheet" href="./styles/Coca-Cola.css">
+    <link rel="stylesheet" href="./styles/Pepsi.css">
+    <link rel="stylesheet" href="./style/Reset.css">
+
 </head>
-<body>
+<!--
+# Olá
+
+O código HTML esboça um layout que parece projetado para manipular a percepção sensorial e a cognição visual de forma estratégica. A organização dos elementos reflete princípios de neurociência aplicados ao design, otimizando a interação do usuário com base na forma como o cérebro processa estímulos visuais e espaciais e particularmente gosto de mesclar neuroociência e design.
+
+## Gatilhos de ativação visual:
+- Logotipo e imagens processadas pela via parvocelular (detalhes, padrões).
+- Elementos grandes e chamativos processados pela via magnocelular (atenção, resposta rápida).
+
+# Engajamento cognitivo:
+- Estímulos subliminares na camada de fundo promovem priming visual.
+- O texto destacado reduz o esforço cognitivo e otimiza o processamento lexical.
+
+## Layout otimizado para fluidez perceptiva:
+- White space (espaços vazios) evitam sobrecarga neural.
+- Mapas e referências espaciais ativam a navegação cognitiva.
+
+Este modelo de design segue uma abordagem neuroergonômica, otimizando a forma como o cérebro recebe, processa e responde às informações visuais, onde foquei mais em aprender tecnicas de manipulação. 
+-->
+<body class="theme-coke">
+    <!-- ESTRUTURA NEUROSSENSORIAL -->
     <header>
-        <img src="./img/menu-burger.svg" alt="Menu hamburger">
+        <img src="./img/menu-burger.svg" alt="Menu hambyrguer" id="menuToggle" style="cursor:pointer;">
         <span>MENU</span>
     </header>
+
+    <!-- NÚCLEO DE PROCESSAMENTO VISUAL -->
+     <!--
+    # Background com logo subliminar (background-logo)
+        - Definição de opacidade reduzida sugere um estímulo subliminar, que pode ser processado pelo córtex visual secundário (V2-V4) sem que o usuário perceba conscientemente.
+        - Reflete a ideia de "priming visual", onde uma imagem de baixa opacidade reforça a identidade da marca e influencia a cognição subconsciente.
+            + Esse tipo de abordagem é útil porque respeita o foco principal do usuário (como texto ou imagens mais destacadas), mas ao mesmo tempo mantém uma "presença subliminar" que influencia percepções e associações de marca de forma suave e eficaz.
     
+    # Texto de alto impacto (content-text)
+        - Atua diretamente sobre a via parvocelular, favorecendo reconhecimento léxico e ativação do giro fusiforme (associado ao reconhecimento de palavras e rostos).
+        - Fontes grandes e bem contrastadas otimizam a leitura rápida, minimizando a carga sobre o córtex pré-frontal.
+            + Ao usar texto com essas características no seu projeto, você não apenas melhora a acessibilidade, mas também garante que a interface seja intuitiva e "amigável" ao sistema visual humano. 
+            + Isso é especialmente útil em contextos como leitura em dispositivos digitais ou interfaces com foco em rápida assimilação de informações.
+
+    # Imagem do produto (content-image)
+        - Centraliza a atenção e age sobre a via magnocelular, estimulando resposta rápida e induzindo interesse imediato.
+        - Imagens grandes e bem iluminadas recrutam a área MT/V5, responsável pela percepção de movimento e profundidade.
+            + Imagens configuradas dessa forma criam uma experiência visual atrativa e instintiva. 
+            + Elas são perfeitas para chamar atenção em interfaces web, propagandas e layouts onde é crucial capturar o foco do usuário imediatamente. 
+            + Se aplicado corretamente, pode transformar uma simples imagem em um ponto central de comunicação e engajamento emocional.
+     -->
     <main>
-        <img src="./img/background-image.png" alt="logo da coca-cola" class="background-logo">
-        <h2 class="content-text">Things go better with</h2>
-        <img src="./img/coca-cola.png" alt="garrafa coca-cola" class="content-image">
+        <img src="" alt="Logo da marca" class="background-logo" id="bgLogo">
+        <h2 class="content-text" id="contentText"></h2>
+        <img src="" alt="Produto" class="content-image" id="contentImage">
     </main>
-    
+
+    <!-- MÓDULO DE METADADOS -->
     <footer>
         <div></div>
         <span>Pedro Mota</span>
-        <img src="./img/map.svg" alt="mapa">
+        <img src="./img/map.svg" alt="Mapa">
     </footer>
-    
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
